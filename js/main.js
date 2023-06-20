@@ -144,7 +144,13 @@ function agregarAlCarrito(e){
         }else{
             productoAgregado.cantidad=1;
             productosEnCarrito.push(productoAgregado);
-        }
+        } 
+        actualizarNumerito(); 
+        localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+}
 
-    
+function actualizarNumerito(){
+    let nuevoNumerito = productosEnCarrito.reduce((acc, producto)=> acc + producto.cantidad, 0);
+    nuevoNumerito.innerText = nuevoNumerito;
+
 }
