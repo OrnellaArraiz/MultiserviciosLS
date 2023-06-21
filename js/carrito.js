@@ -127,6 +127,7 @@ function actualizarTotal() {
 }
 
 botonComprar.addEventListener("click", comprarCarrito);
+
 function comprarCarrito() {
 
     const contenedorCarritoVacio = document.querySelector("#carrito-vacio");

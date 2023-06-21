@@ -114,12 +114,6 @@ function mostrarResultados(resultados) {
   }
 }
 
-function redirigirPaginaPrincipal() {
-    window.location.href = 'https://ornellaarraiz.github.io/MultiserviciosLS/';
-  }
-  
-  clearButton.addEventListener('click', redirigirPaginaPrincipal);
-
 let productosEnCarrito = localStorage.getItem("productos-en-carrito") ?? '[]';
 productosEnCarrito = JSON.parse(productosEnCarrito);
 
