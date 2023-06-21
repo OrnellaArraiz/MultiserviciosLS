@@ -2,7 +2,7 @@ const productos = [
     {
         id: "inyectores-chevrolet",
         titulo: "Limpieza de inyectores para Chevrolet",
-        imagen: "../css/img/Chevrolet DMAX/Limpieza chevrolet DMAX (1).jpg",
+        imagen: "./css/img/Chevrolet DMAX/Limpieza chevrolet DMAX (1).jpg",
         categoria: {
             nombre: "Limpieza de Inyectores",
             id: "inyectores"
@@ -12,7 +12,7 @@ const productos = [
     {
         id: "inyectores-fiat",
         titulo: "Limpieza de inyectores para Fiat",
-        imagen: "../css/img/Fiat siena/Limpieza Fiat Sienna (1).jpg",
+        imagen: "./css/img/Fiat siena/Limpieza Fiat Sienna (1).jpg",
         categoria: {
             nombre: "Limpieza de Inyectores",
             id: "inyectores"
@@ -22,7 +22,7 @@ const productos = [
     {
         id: "inyectores-toyota",
         titulo: "Limpieza de inyectores para Toyota",
-        imagen: "../css/img/Toyota Terios/Limpieza toyota Terios (1).jpg",
+        imagen: "./css/img/Toyota Terios/Limpieza toyota Terios (1).jpg",
         categoria: {
             nombre: "Limpieza de Inyectores",
             id: "inyectores"
@@ -32,7 +32,7 @@ const productos = [
     {
         id: "inyectores-volskwagen",
         titulo: "Limpieza de inyectores para volskwagen",
-        imagen: "../css/img/Volkswagen Gol/Limpieza Gol (1).jpg",
+        imagen: "./css/img/Volkswagen Gol/Limpieza Gol (1).jpg",
         categoria: {
             nombre: "Limpieza de Inyectores",
             id: "inyectores"
@@ -43,7 +43,7 @@ const productos = [
     {
         id: "escaner-01",
         titulo: "Escaner Automotriz",
-        imagen: "../css/img/escaner.png",
+        imagen: "./css/img/escaner.png",
         categoria: {
             nombre: "Escaner",
             id: "escaner"
@@ -54,7 +54,7 @@ const productos = [
     {
         id: "mecanica-01",
         titulo: "Mecánica general",
-        imagen: "../css/img/mecanica.png",
+        imagen: "./css/img/mecanica.png",
         categoria: {
             nombre: "Mecánica",
             id: "mecanica"
