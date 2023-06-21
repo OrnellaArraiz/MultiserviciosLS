@@ -15,6 +15,7 @@
             <header>
                 <h1 class="logo"></h1>
             </header>
+                       
             <nav>
                 <ul class="menu">
                     <li><button id="todos" class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i>Todos los Servicios</button></li>
@@ -30,6 +31,15 @@
         </aside>
 
         <main>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Buscar...">
+                <button type="button" id="search-button">Buscar</button>
+                <button type="button" id="clear-button">Limpiar</button>
+              </div>
+              
+              <div id="search-results"></div>
+              
+
             <h2 id="titulo-principal" class="titulo-principal">Todos los servicios</h2>
             <div id="contenedor-productos" class="contenedor-productos">
                 

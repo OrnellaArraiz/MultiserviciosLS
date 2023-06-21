@@ -61,8 +61,64 @@ const productos = [
         },
         precio: 100
     },
-        
 ];
+
+var searchInput = document.getElementById('search-input');
+var searchButton = document.getElementById('search-button');
+var searchResults = document.getElementById('search-results');
+var clearButton = document.getElementById('clear-button');
+
+searchButton.addEventListener('click', function() {
+  var searchTerm = searchInput.value;
+  var searchMatches = buscarProductos(searchTerm);
+
+  mostrarResultados(searchMatches);
+});
+
+clearButton.addEventListener('click', function() {
+    searchInput.value = ''; 
+    mostrarResultados(productos); 
+  });
+
+function buscarProductos(term) {
+  term = term.toLowerCase();
+  return productos.filter(function(producto) {
+    return (
+      producto.titulo.toLowerCase().includes(term) ||
+      producto.categoria.nombre.toLowerCase().includes(term)
+    );
+  });
+}
+
+function mostrarResultados(resultados) {
+  if (resultados.length > 0) {
+    var resultadosHTML = resultados
+      .map(function(producto) {
+        return `
+        <div class="producto">
+            <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
+        <div class="producto-detalles">
+        <h3 class="producto-titulo">${producto.titulo}</h3>
+            <p class="producto-precio">$${producto.precio}</p>
+            <button class="producto-agregar" id="${producto.id}">Agregar</button>
+        </div>
+        </div>
+        `;
+      })
+      .join('');
+
+    searchResults.innerHTML = resultadosHTML;
+    actualizarBotonesAgregar(); 
+  } else {
+    searchResults.innerHTML = 'No se encontraron resultados.';
+  }
+}
+
+function redirigirPaginaPrincipal() {
+    window.location.href = 'https://ornellaarraiz.github.io/MultiserviciosLS/';
+  }
+  
+  clearButton.addEventListener('click', redirigirPaginaPrincipal);
 
 let productosEnCarrito = localStorage.getItem("productos-en-carrito") ?? '[]';
 productosEnCarrito = JSON.parse(productosEnCarrito);
