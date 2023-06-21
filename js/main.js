@@ -113,7 +113,7 @@ botonesCategorias.forEach(boton => {
         e.currentTarget.classList.add("active");
         
         if (e.currentTarget.id != "todos") {
-            const productoCategoria = productos.find((producto) => productoCategoria.id === e.currentTarget.id);
+            const productoCategoria = productos.find(producto => productoCategoria.id === e.currentTarget.id);
             tituloPrincipal.innerText = productoCategoria.categoria.nombre;
             
             const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id); 
