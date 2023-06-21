@@ -67,6 +67,7 @@ var searchInput = document.getElementById('search-input');
 var searchButton = document.getElementById('search-button');
 var searchResults = document.getElementById('search-results');
 var clearButton = document.getElementById('clear-button');
+var previousResults = '';
 
 searchButton.addEventListener('click', function() {
   var searchTerm = searchInput.value;
@@ -77,7 +78,7 @@ searchButton.addEventListener('click', function() {
 
 clearButton.addEventListener('click', function() {
     searchInput.value = ''; 
-    mostrarResultados(productos); 
+    mostrarResultados(previousResults); 
   });
 
 function buscarProductos(term) {
@@ -109,8 +110,10 @@ function mostrarResultados(resultados) {
 
     searchResults.innerHTML = resultadosHTML;
     actualizarBotonesAgregar(); 
+    previousResults = resultados;
   } else {
     searchResults.innerHTML = 'No se encontraron resultados.';
+    previousResults = '';
   }
 }
 
@@ -162,8 +165,8 @@ botonesCategorias.forEach(boton => {
         botonesCategorias.forEach(boton => boton.classList.remove("active"));
         e.currentTarget.classList.add("active");
         
-        if (e.currentTarget.id != "todos") {
-            const productoCategoria = productos.find(producto => productoCategoria.id === e.currentTarget.id);
+        if (e.currentTarget.id !== "todos") {
+            const productoCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id);
             tituloPrincipal.innerText = productoCategoria.categoria.nombre;
             
             const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id); 
