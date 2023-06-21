@@ -64,6 +64,9 @@ const productos = [
         
 ];
 
+let productosEnCarrito = localStorage.getItem("productos-en-carrito") ?? '[]';
+productosEnCarrito = JSON.parse(productosEnCarrito);
+
 let categorias = [];
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo-principal");
@@ -85,7 +88,7 @@ function cargarProductos(productosElegidos){
                     <div class="producto-detalles">
                         <h3 class="producto-titulo">${producto.titulo}</h3>
                         <p class="producto-precio">${producto.precio}</p>
-                        <button class="producto-agregar" id= "${producto.id}>Agregar</button>
+                        <button class="producto-agregar" id="${producto.id}">Agregar</button>
                     </div>
         `;
 
@@ -99,7 +102,7 @@ function cargarProductos(productosElegidos){
 
 function cargarProductos(productosBoton) {
     
-  };
+};
 
 document.addEventListener("DOMContentLoaded", function() {
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
@@ -120,9 +123,6 @@ botonesCategorias.forEach(boton => {
             tituloPrincipal.innerText = "Todos los productos";
             cargarProductos(productos);
         }
-
-        
-        
     });
 })
 });
@@ -150,7 +150,8 @@ function agregarAlCarrito(e){
 }
 
 function actualizarNumerito(){
+    const numerito = document.querySelector("#numerito");
     let nuevoNumerito = productosEnCarrito.reduce((acc, producto)=> acc + producto.cantidad, 0);
-    nuevoNumerito.innerText = nuevoNumerito;
-
+    console.log('a ver', numerito, nuevoNumerito)
+    numerito.innerText = nuevoNumerito;
 }
