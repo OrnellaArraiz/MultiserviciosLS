@@ -1,0 +1,62 @@
+[
+    {
+        "id": "inyectores-chevrolet",
+        "titulo": "Limpieza de inyectores para Chevrolet",
+        "imagen": "./css/img/Chevrolet DMAX/Limpieza chevrolet DMAX (1).jpg",
+        "categoria": {
+            "nombre": "Limpieza de Inyectores",
+            "id": "inyectores"
+        },
+        "precio": 20
+    },
+    {
+        "id": "inyectores-fiat",
+        "titulo": "Limpieza de inyectores para Fiat",
+        "imagen": "./css/img/Fiat siena/Limpieza Fiat Sienna (1).jpg",
+        "categoria": {
+            "nombre": "Limpieza de Inyectores",
+            "id": "inyectores"
+        },
+        "precio": 20
+    },
+    {
+        "id": "inyectores-toyota",
+        "titulo": "Limpieza de inyectores para Toyota",
+        "imagen": "./css/img/Toyota Terios/Limpieza toyota Terios (1).jpg",
+        "categoria": {
+            "nombre": "Limpieza de Inyectores",
+            "id": "inyectores"
+        },
+        "precio": 20
+    },
+    {
+        "id": "inyectores-volskwagen",
+        "titulo": "Limpieza de inyectores para Volskwagen",
+        "imagen": "./css/img/Volkswagen Gol/Limpieza Gol (1).jpg",
+        "categoria": {
+            "nombre": "Limpieza de Inyectores",
+            "id": "inyectores"
+        },
+        "precio": 20
+    },
+    {
+        "id": "escaner-01",
+        "titulo": "Escaner Automotriz",
+        "imagen": "./css/img/escaner.png",
+        "categoria": {
+            "nombre": "Escaner",
+            "id": "escaner"
+        },
+        "precio": 50
+    },
+    {
+        "id": "mecanica-01",
+        "titulo": "Mecánica general",
+        "imagen": "./css/img/mecanica.png",
+        "categoria": {
+            "nombre": "Mecánica",
+            "id": "mecanica"
+        },
+        "precio": 100
+    }
+]
